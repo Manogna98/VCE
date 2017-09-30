@@ -25,7 +25,7 @@ public class NextActivity extends AppCompatActivity implements View.OnClickListe
     private ProgressDialog progressDialog;
 
 
-    //defining firebaseauth object
+    //defining firebase authentication object
     private FirebaseAuth firebaseAuth;
 
     @Override
@@ -33,7 +33,7 @@ public class NextActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_next);
 
-        //initializing firebase auth object
+        //initializing firebase authentication object
         firebaseAuth = FirebaseAuth.getInstance();
 
         //initializing views
@@ -44,17 +44,17 @@ public class NextActivity extends AppCompatActivity implements View.OnClickListe
 
         progressDialog = new ProgressDialog(this);
 
-        //attaching listener to button
+
         button.setOnClickListener(this);
     }
     @Override
     public void onClick(View view) {
-        //calling register method on click
+
         registerUser();
     }
     private void registerUser(){
 
-        //getting email and password from edit texts
+
         String email = editTextEmail.getText().toString().trim();
         String password  = editTextPassword.getText().toString().trim();
 
@@ -69,13 +69,13 @@ public class NextActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
 
-        //if the email and password are not empty
-        //displaying a progress dialog
 
-        progressDialog.setMessage("Registering Please Wait...");
+        //displaying that progress dialog
+
+        progressDialog.setMessage("Yo! bro! Have some patience");
         progressDialog.show();
 
-        //creating a new user
+        //registering a new user
         firebaseAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -83,10 +83,10 @@ public class NextActivity extends AppCompatActivity implements View.OnClickListe
                         //checking if success
                         if(task.isSuccessful()){
                             //display some message here
-                            Toast.makeText(NextActivity.this,"Successfully registered",Toast.LENGTH_LONG).show();
+                            Toast.makeText(NextActivity.this,"Valkommen till VCE",Toast.LENGTH_LONG).show();
                         }else{
                             //display some message here
-                            Toast.makeText(NextActivity.this,"Registration Error",Toast.LENGTH_LONG).show();
+                            Toast.makeText(NextActivity.this,"I don't like you. Try again.",Toast.LENGTH_LONG).show();
                         }
                         progressDialog.dismiss();
                     }
