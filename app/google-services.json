@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "398496748572",
+    "firebase_url": "https://vceapp-c9eb7.firebaseio.com",
+    "project_id": "vceapp-c9eb7",
+    "storage_bucket": "vceapp-c9eb7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:398496748572:android:f8b62915ef2d18c8",
+        "android_client_info": {
+          "package_name": "com.example.nishant.vce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "398496748572-18vh1u7e8nlnskaq4qj0bp5m8ghh51ct.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nishant.vce",
+            "certificate_hash": "c0b7f5de1a95c0096a8df5383f116d4c1c6daaee"
+          }
+        },
+        {
+          "client_id": "398496748572-qh8qf1itccqio6kfklnn4l61sjekud6q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmN6-v25hY7a3lwaqGR9Cg-a10a5Y3jvA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "398496748572-qh8qf1itccqio6kfklnn4l61sjekud6q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
