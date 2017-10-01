@@ -2,6 +2,7 @@ package com.example.nishant.vce;
 
 
         import android.app.ProgressDialog;
+        import android.content.Intent;
         import android.support.annotation.NonNull;
         import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
@@ -83,10 +84,12 @@ public class NextActivity extends AppCompatActivity implements View.OnClickListe
                         //checking if success
                         if(task.isSuccessful()){
                             //display some message here
-                            Toast.makeText(NextActivity.this,"Valkommen till VCE",Toast.LENGTH_LONG).show();
+                            Toast.makeText(NextActivity.this,"Registration Successful",Toast.LENGTH_LONG).show();
+                            Intent i = new Intent(NextActivity.this,third.class);
+                            startActivity(i);
                         }else{
                             //display some message here
-                            Toast.makeText(NextActivity.this,"I don't like you. Try again.",Toast.LENGTH_LONG).show();
+                            Toast.makeText(NextActivity.this,"Please try again",Toast.LENGTH_LONG).show();
                         }
                         progressDialog.dismiss();
                     }
