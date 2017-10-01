@@ -72,7 +72,7 @@ public class NextActivity extends AppCompatActivity implements View.OnClickListe
 
         //displaying that progress dialog
 
-        progressDialog.setMessage("Yo! bro! Have some patience");
+        progressDialog.setMessage("Please wait");
         progressDialog.show();
 
         //registering a new user
