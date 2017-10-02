@@ -45,6 +45,14 @@ public class NextActivity extends AppCompatActivity implements View.OnClickListe
         progressDialog = new ProgressDialog(this);
 
         button.setOnClickListener(this);
+
+        if(firebaseAuth.getCurrentUser() != null){
+            //close this activity
+            finish();
+            //opening profile activity
+            startActivity(new Intent(getApplicationContext(),Dashboard.class));
+        }
+
     }
     @Override
     public void onClick(View view) {
@@ -84,7 +92,7 @@ public class NextActivity extends AppCompatActivity implements View.OnClickListe
                             //display some message here
                             finish();
                             Toast.makeText(NextActivity.this,"Successfully Logged in",Toast.LENGTH_SHORT).show();
-                            Intent i = new Intent(NextActivity.this,third.class);
+                            Intent i = new Intent(NextActivity.this,Dashboard.class);
                             startActivity(i);
                         }else{
                             //display some message here
