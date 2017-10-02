@@ -40,20 +40,18 @@ public class NextActivity extends AppCompatActivity implements View.OnClickListe
         //initializing views
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-
         button = (Button) findViewById(R.id.button);
 
         progressDialog = new ProgressDialog(this);
-
 
         button.setOnClickListener(this);
     }
     @Override
     public void onClick(View view) {
 
-        registerUser();
+        login();
     }
-    private void registerUser(){
+    private void login(){
 
 
         String email = editTextEmail.getText().toString().trim();
@@ -77,23 +75,26 @@ public class NextActivity extends AppCompatActivity implements View.OnClickListe
         progressDialog.show();
 
         //registering a new user
-        firebaseAuth.createUserWithEmailAndPassword(email, password)
+        firebaseAuth.signInWithEmailAndPassword(email,password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         //checking if success
                         if(task.isSuccessful()){
                             //display some message here
-                            Toast.makeText(NextActivity.this,"Registration Successful",Toast.LENGTH_LONG).show();
+                            finish();
+                            Toast.makeText(NextActivity.this,"Successfully Logged in",Toast.LENGTH_SHORT).show();
                             Intent i = new Intent(NextActivity.this,third.class);
                             startActivity(i);
                         }else{
                             //display some message here
                             Toast.makeText(NextActivity.this,"Please try again",Toast.LENGTH_LONG).show();
+
                         }
                         progressDialog.dismiss();
                     }
                 });
+
 
     }
 
