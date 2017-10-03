@@ -30,14 +30,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Section A"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="274dp" />
+        tools:layout_editor_absoluteY="274dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <RadioButton
         android:id="@+id/radioButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Section B"
-        tools:layout_editor_absoluteX="237dp"
-        tools:layout_editor_absoluteY="274dp" />
+        tools:layout_editor_absoluteY="274dp"
+        tools:layout_editor_absoluteX="237dp" />
 </android.support.constraint.ConstraintLayout>

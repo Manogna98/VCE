@@ -3,6 +3,7 @@ package com.example.nishant.vce;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Selection;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,11 +13,12 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import static com.example.nishant.vce.R.id.button1;
 import static com.example.nishant.vce.R.id.textView;
 
 public class Dashboard extends AppCompatActivity implements View.OnClickListener{
 
-    private Button button;
+    private Button button,test;
     private FirebaseAuth firebaseAuth;
     private TextView text;
 
@@ -27,12 +29,15 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
 
         firebaseAuth= FirebaseAuth.getInstance();
         button = (Button) findViewById(R.id.button);
+        test = (Button) findViewById(R.id.button1);
         text= (TextView) findViewById(R.id.textView2);
+
         button.setOnClickListener(this);
+        test.setOnClickListener(this);
 
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
-        text.setText("Hey!"+ user.getEmail());
+        text.setText("Hey! "+ user.getEmail());
 
     }
 
@@ -51,9 +56,9 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
     @Override
     public void onClick(View v) {
 
-        logout();
 
-
+            logout();
 
     }
 }
+
