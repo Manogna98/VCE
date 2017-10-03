@@ -7,10 +7,10 @@ import android.view.View;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
-public class selection extends AppCompatActivity implements View.OnClickListener {
+public class selection extends AppCompatActivity {
 
-    private TextView select,branch;
-    private RadioButton a,b;
+    private TextView select, branch;
+    private RadioButton a, b;
 
 
     @Override
@@ -19,21 +19,27 @@ public class selection extends AppCompatActivity implements View.OnClickListener
         setContentView(R.layout.activity_selection);
 
 
-        select= (TextView)findViewById(R.id.textView3);
-        branch= (TextView)findViewById(R.id.textView4);
-        a= (RadioButton)findViewById(R.id.radioButton);
-        b= (RadioButton)findViewById(R.id.radioButton2);
+        select = (TextView) findViewById(R.id.textView3);
+        //branch = (TextView) findViewById(R.id.textView4);
+        a = (RadioButton) findViewById(R.id.radioButton);
+        b = (RadioButton) findViewById(R.id.radioButton2);
 
-    }
+        a.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(selection.this, sectionA.class);
+                startActivity(it);
+            }
+        });
 
-    @Override
-    public void onClick(View v) {
-
-        if (v==a){
-
-            Intent i = new Intent(selection.this,sectionA.class);
-            startActivity(i);
-        }
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(selection.this, sectionB.class);
+                startActivity(in);
+            }
+        });
 
     }
 }
+

@@ -6,6 +6,7 @@ package com.example.nishant.vce;
         import android.support.annotation.NonNull;
         import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
+        import android.text.Selection;
         import android.text.TextUtils;
         import android.view.View;
         import android.widget.Button;
@@ -92,7 +93,7 @@ public class NextActivity extends AppCompatActivity implements View.OnClickListe
                             //display some message here
                             finish();
                             Toast.makeText(NextActivity.this,"Successfully Logged in",Toast.LENGTH_SHORT).show();
-                            Intent i = new Intent(NextActivity.this,Dashboard.class);
+                            Intent i = new Intent(NextActivity.this,selection.class);
                             startActivity(i);
                         }else{
                             //display some message here
