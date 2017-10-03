@@ -51,7 +51,7 @@ public class NextActivity extends AppCompatActivity implements View.OnClickListe
             //close this activity
             finish();
             //opening profile activity
-            startActivity(new Intent(getApplicationContext(),Dashboard.class));
+            startActivity(new Intent(getApplicationContext(),selection.class));
         }
 
     }
