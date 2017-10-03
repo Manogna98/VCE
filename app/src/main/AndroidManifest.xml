@@ -19,7 +19,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".NextActivity" />
-        <activity android:name=".Dashboard"></activity>
+        <activity android:name=".Dashboard" />
+        <activity android:name=".selection" />
+        <activity android:name=".sectionA" />
+        <activity android:name=".sectionB"></activity>
     </application>
 
 </manifest>
