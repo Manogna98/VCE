@@ -6,14 +6,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+import static com.example.nishant.vce.R.id.textView;
 
 public class Dashboard extends AppCompatActivity implements View.OnClickListener{
 
     private Button button;
     private FirebaseAuth firebaseAuth;
+    private TextView text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +27,12 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
 
         firebaseAuth= FirebaseAuth.getInstance();
         button = (Button) findViewById(R.id.button);
+        text= (TextView) findViewById(R.id.textView2);
         button.setOnClickListener(this);
+
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+
+        text.setText("Hey!"+ user.getEmail());
 
     }
 
@@ -30,6 +40,7 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
 
         firebaseAuth.signOut();
         finish();
+
         Intent i= new Intent(Dashboard.this,NextActivity.class);
         startActivity(i);
 

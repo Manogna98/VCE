@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context="com.example.nishant.vce.MainActivity">
 
     <TextView
@@ -22,28 +23,39 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="207dp"
-        android:layout_height="75dp"
+        android:layout_width="279dp"
+        android:layout_height="74dp"
         android:text="Student"
+        android:backgroundTint="@color/buttons"
+        android:textColor="@color/colorPrimaryDark"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintRight_toRightOf="@+id/textView"
+        app:layout_constraintRight_toRightOf="parent"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="35dp"
-        app:layout_constraintLeft_toRightOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.478" />
+        android:layout_marginBottom="36dp"
+        app:layout_constraintHorizontal_bias="0.503"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteY="166dp" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="206dp"
-        android:layout_height="71dp"
+        android:layout_width="280dp"
+        android:layout_height="70dp"
         android:text="faculty"
+        android:backgroundTint="@color/buttons"
+        android:textColor="@color/colorPrimaryDark"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="@+id/textView"
+        app:layout_constraintRight_toRightOf="parent"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintTop_toTopOf="@+id/textView"
-        app:layout_constraintLeft_toRightOf="@+id/textView" />
+        android:layout_marginTop="18dp"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteY="259dp" />
 
 </android.support.constraint.ConstraintLayout>

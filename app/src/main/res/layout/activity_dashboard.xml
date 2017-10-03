@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/windowBackground"
     tools:context="com.example.nishant.vce.Dashboard">
 
 
@@ -14,12 +15,15 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:text="Logout"
+        android:backgroundTint="@color/buttons"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginBottom="8dp"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintVertical_bias="0.84" />
 
     <TextView
         android:id="@+id/textView2"
@@ -27,12 +31,15 @@
         android:layout_height="61dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:text="Hi !"
-        android:textSize="25dp"
+        android:textSize="20dp"
+        android:textColor="@color/buttons"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="53dp"
-        app:layout_constraintHorizontal_bias="0.5" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintVertical_bias="0.139" />
 </android.support.constraint.ConstraintLayout>
