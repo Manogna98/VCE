@@ -33,7 +33,16 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
         text= (TextView) findViewById(R.id.textView2);
 
         button.setOnClickListener(this);
-        test.setOnClickListener(this);
+
+        test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent= new Intent(Dashboard.this,Selection.class);
+                startActivity(intent);
+
+            }
+        });
 
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
@@ -54,10 +63,9 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
     }
 
     @Override
-    public void onClick(View v) {
-
-
+    public void onClick(View view) {
             logout();
+
 
     }
 }
