@@ -50,7 +50,7 @@ public class NextActivity extends AppCompatActivity implements View.OnClickListe
             //close this activity
             finish();
             //opening profile activity
-            startActivity(new Intent(getApplicationContext(),Dashboard.class));
+            startActivity(new Intent(getApplicationContext(),selection.class));
         }
 
     }
@@ -92,7 +92,7 @@ public class NextActivity extends AppCompatActivity implements View.OnClickListe
                             //display some message here
                             finish();
                             Toast.makeText(NextActivity.this,"Successfully Logged in",Toast.LENGTH_SHORT).show();
-                            Intent i = new Intent(NextActivity.this,Dashboard.class);
+                            Intent i = new Intent(NextActivity.this,selection.class);
                             startActivity(i);
                         }else{
                             //display some message here

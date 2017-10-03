@@ -13,8 +13,13 @@
         android:text="Plese select your section:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:visibility="visible"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="46dp" />
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="46dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="44dp" />
 
     <TextView
         android:id="@+id/textView4"
@@ -22,23 +27,48 @@
         android:layout_height="wrap_content"
         android:text="CSE 3/4"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="148dp" />
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="148dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="44dp" />
 
     <RadioButton
         android:id="@+id/radioButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Section A"
-        tools:layout_editor_absoluteY="274dp"
         android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RadioButton
         android:id="@+id/radioButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Section B"
-        tools:layout_editor_absoluteY="274dp"
-        tools:layout_editor_absoluteX="237dp" />
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginEnd="56dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/radioButton"
+        tools:layout_constraintBaseline_creator="1"
+        android:layout_marginRight="56dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="369dp"
+        android:layout_height="56dp"
+        android:text="next"
+        android:layout_marginRight="7dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="59dp" />
 </android.support.constraint.ConstraintLayout>
