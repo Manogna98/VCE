@@ -32,6 +32,12 @@ public class section_a extends AppCompatActivity implements View.OnClickListener
 
         button.setOnClickListener(this);
 
+        firebaseAuth = FirebaseAuth.getInstance();
+
+        //if getCurrentUser does not returns null
+
+
+
 
         //FirebaseUser user = firebaseAuth.getCurrentUser();
 

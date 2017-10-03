@@ -13,28 +13,15 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class selection extends AppCompatActivity  {
 
-    private TextView select,branch;
     private RadioButton a,b;
-    Button next;
 
-    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection);
 
-        firebaseAuth = FirebaseAuth.getInstance();
 
-        if(firebaseAuth.getCurrentUser() != null){
-            //close this activity
-            finish();
-            //opening profile activity
-            startActivity(new Intent(getApplicationContext(),selection.class));
-        }
-
-
-        select = (TextView) findViewById(R.id.textView3);
         a = (RadioButton) findViewById(R.id.radioButton);
         b = (RadioButton) findViewById(R.id.radioButton2);
 
