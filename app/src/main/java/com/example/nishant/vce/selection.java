@@ -8,64 +8,41 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
-<<<<<<< HEAD
+import com.google.firebase.auth.FirebaseAuth;
+
+
 public class selection extends AppCompatActivity  {
 
     private TextView select,branch;
     private RadioButton a,b;
     Button next;
-=======
-public class selection extends AppCompatActivity {
 
-    private TextView select, branch;
-    private RadioButton a, b;
->>>>>>> 46609be54e9dbafd477192571cca4ff47b78bd4c
-
+    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection);
 
+        firebaseAuth = FirebaseAuth.getInstance();
 
-<<<<<<< HEAD
-        select= (TextView)findViewById(R.id.textView3);
-        branch= (TextView)findViewById(R.id.textView4);
-        a= (RadioButton)findViewById(R.id.radioButton);
-        b= (RadioButton)findViewById(R.id.radioButton2);
-        next= (Button)findViewById(R.id.button3);
+        if(firebaseAuth.getCurrentUser() != null){
+            //close this activity
+            finish();
+            //opening profile activity
+            startActivity(new Intent(getApplicationContext(),selection.class));
+        }
 
-       next.setOnClickListener(new View.OnClickListener() {
-          @Override
-            public void onClick(View view) {
-              //if(view==a) {
 
-                  Intent i4 = new Intent(selection.this, sectionA.class);
-                  startActivity(i4);
-              //}
-            }
-        });
-
-    }
-
-    //@Override
-    //public void onClick(View v) {
-
-      //  if (v==a){
-
-        //    Intent i = new Intent(selection.this,sectionA.class);
-          //  startActivity(i);
-        //}
-=======
         select = (TextView) findViewById(R.id.textView3);
-        //branch = (TextView) findViewById(R.id.textView4);
         a = (RadioButton) findViewById(R.id.radioButton);
         b = (RadioButton) findViewById(R.id.radioButton2);
+
 
         a.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(selection.this, sectionA.class);
+                Intent it = new Intent(selection.this, section_a.class);
                 startActivity(it);
             }
         });
@@ -77,8 +54,8 @@ public class selection extends AppCompatActivity {
                 startActivity(in);
             }
         });
->>>>>>> 46609be54e9dbafd477192571cca4ff47b78bd4c
 
-    //}
+
+    }
 }
 

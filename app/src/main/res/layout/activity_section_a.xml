@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.nishant.vce.sectionA"
+    tools:context="com.example.nishant.vce.section_a"
     android:background="@color/windowBackground">
 
 

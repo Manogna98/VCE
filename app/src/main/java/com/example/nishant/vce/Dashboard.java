@@ -13,8 +13,7 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import static com.example.nishant.vce.R.id.button1;
-import static com.example.nishant.vce.R.id.textView;
+
 
 public class Dashboard extends AppCompatActivity implements View.OnClickListener{
 
@@ -29,7 +28,6 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
 
         firebaseAuth= FirebaseAuth.getInstance();
         button = (Button) findViewById(R.id.button);
-        test = (Button) findViewById(R.id.button1);
         text= (TextView) findViewById(R.id.textView2);
 
         button.setOnClickListener(this);

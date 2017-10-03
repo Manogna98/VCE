@@ -22,7 +22,8 @@
         <activity android:name=".Dashboard" />
         <activity android:name=".selection" />
         <activity android:name=".sectionA" />
-        <activity android:name=".sectionB"></activity>
+        <activity android:name=".sectionB" />
+        <activity android:name=".section_a"></activity>
     </application>
 
 </manifest>
