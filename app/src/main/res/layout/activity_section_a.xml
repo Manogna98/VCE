@@ -12,7 +12,7 @@
         android:id="@+id/button3"
         android:layout_width="165dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="55dp"
         android:background="@color/buttons"
         android:textColor="@color/colorPrimaryDark"
         android:text="Logout"
@@ -21,7 +21,8 @@
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1" />
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintHorizontal_bias="0.502" />
 
     <TextView
         android:id="@+id/textView5"
@@ -37,5 +38,20 @@
         tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="55dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="235dp"
+        android:layout_height="48dp"
+        android:text="college portal "
+        android:textColor="@color/colorPrimaryDark"
+        android:background="@color/buttons"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="154dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

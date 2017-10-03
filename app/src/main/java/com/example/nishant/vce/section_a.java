@@ -18,7 +18,7 @@ package com.example.nishant.vce;
 
 public class section_a extends AppCompatActivity implements View.OnClickListener{
 
-    private Button button;
+    private Button button,b;
     private FirebaseAuth firebaseAuth;
 
     @Override
@@ -28,20 +28,18 @@ public class section_a extends AppCompatActivity implements View.OnClickListener
 
         firebaseAuth= FirebaseAuth.getInstance();
         button = (Button) findViewById(R.id.button3);
+        b = (Button) findViewById(R.id.button5);
 
 
         button.setOnClickListener(this);
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        firebaseAuth = FirebaseAuth.getInstance();
-
-        //if getCurrentUser does not returns null
-
-
-
-
-        //FirebaseUser user = firebaseAuth.getCurrentUser();
-
-        //text.setText("Hey! "+ user.getEmail());
+                Intent i = new Intent(section_a.this, Web.class);
+                startActivity(i);
+            }
+        });
 
     }
 
