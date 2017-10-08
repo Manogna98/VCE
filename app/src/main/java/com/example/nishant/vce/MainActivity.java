@@ -29,6 +29,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent i2 = new Intent(MainActivity.this,faculty_login.class);
+                startActivity(i2);
+            }
+        });
+
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
